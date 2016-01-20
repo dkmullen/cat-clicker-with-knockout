@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+    <title>Cat Clicker</title>
+</head>
+
+<body>
+	<div id="container">
+		<h2>Choose a cat:</h2>
+		<div id="menu">
+			<ul data-bind="foreach: catList">
+				<li data-bind="text: name, click: $parent.setCat"></li>
+			</ul>
+		</div>
+
+		<div id="cat" data-bind="with: currentCat()">
+			<h2 id="cat_name" data-bind="text: fullName"></h2>
+			<h4 id="title" data-bind="text: title"></h4>
+			<img id="cat_pic" alt="cute cat" data-bind="click: $parent.incrementCounter,
+			attr: {src: pic}">	
+			<div id="counter" data-bind="text: counter"></div>
+		</div>
+		
+		<button id="admin-button" data-bind="click: adminButton">Admin</button>
+	</div>
+
+	<div id="admin-area">
+		<div id="admin-box" data-bind = "visible: showAdminBox">
+			<ul>
+				<li>Name:<input type="text" id="name" value=""></li>
+				<li>Img URL:<input type="text" id="pic" value=""></li>
+				<li>Counter:<input type="text" id="counter-box" value=""></li>
+			</ul>
+			<button id="cancel" data-bind="click: cancelButton">Cancel</button>
+			<button id="save" onclick="">Save</button>
+		</div>
+	</div>
+	
+	<script type='text/javascript' src='js/knockout-3.4.0.js'></script>
+	<script type='text/javascript' src="js/cat.js"></script>
+</body>
+</html>

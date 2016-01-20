@@ -1,0 +1,42 @@
+body {
+	text-align: center;
+	color: #404040;
+	max-width: 400px;
+	font-family: sans-serif;
+	margin: 0 auto;
+}
+#container {
+	background-color: #ECEEE5;
+	padding: 5px 0 10px 0;
+}
+li {
+	padding: 0;	
+	list-style-type: none;
+	margin: 0;	
+}
+#menu ul {
+	background-color: #404040;
+	color: #F2F2F2;
+}
+#menu li {
+	padding: 10px 5px 10px 5px;
+	display: inline-block;
+}
+#menu li:hover {
+	background-color: #111;
+}
+#cat {
+	margin-bottom: 20px;
+}
+#admin-box {
+	background-color: #404040;
+	padding: 10px 0 20px 0;
+	color: #F2F2F2;
+}
+#admin-box li {
+	text-align: right;
+	margin-right: 80px;
+}
+input {
+	margin: 0 0 5px 5px;
+}
